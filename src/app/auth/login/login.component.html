@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" (submit)="onLogin()">
+    <p>Login</p>
+    <label for="username"><b>Username:</b></label>
+    <input type="text" formControlName="username"><br>
+    <label for="password"><b>Password:</b></label>
+    <input type="password" formControlName="password"><br><br>
+    <button class="login-button">Login!</button>
+</form>
+<button class="register-button" [routerLink]="['/register']">Register!</button>

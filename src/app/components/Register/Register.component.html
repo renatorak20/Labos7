@@ -1,0 +1,28 @@
+<form [formGroup]="registerGroup" (submit)="onSubmit()">
+    <p>Register form:</p>
+    <label for="username"><b>Username:</b></label><br>
+        <input id="username" formControlName="username" type="text" placeholder="Username"><br>
+    <label for="password"><b>Password:</b></label><br>
+        <input type="password" formControlName="password" placeholder="Password"><br>
+    <label for="passwordRepeat"><b>Password repeat:</b></label><br>
+        <input type="password" formControlName="passwordRepeat" placeholder="Repeat password"><br>
+    <label for="name"><b>Name:</b></label><br>
+        <input type="text" formControlName="name" placeholder="Name"><br>
+    <label for="email"><b>E-mail:</b></label><br>
+    <input type="email" formControlName="email" placeholder="E-mail"><br><br>
+    <div style="color: red;" *ngIf="registerGroup.controls['username'].invalid && (registerGroup.controls['username'].dirty || registerGroup.controls['username'].touched)">
+        Username needs to have at least 4 characters
+    </div>
+    <div style="color: red;" *ngIf="registerGroup.controls['email'].invalid && (registerGroup.controls['email'].dirty || registerGroup.controls['email'].touched)">
+        E-mail is not valid
+    </div>
+    <div style="color: red;" *ngIf="registerGroup.get('passwordRepeat')?.invalid && (registerGroup.get('passwordRepeat')?.dirty || registerGroup.get('passwordRepeat')?.touched)">
+        Passwords do not match
+    </div>
+
+    <br>
+    <button class="register-button">Register!</button>
+</form>
+<br>
+
+<a [routerLink]="['/login']">Back to login form</a>

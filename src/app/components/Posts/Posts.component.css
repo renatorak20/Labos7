@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+
+.button-disabled {
+  background-color: red;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-disabled:hover {
+  background-color: red;
+}
+
+.button-enabled {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-enabled:hover {
+  background-color: #45a049;
+}

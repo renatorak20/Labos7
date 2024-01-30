@@ -1,0 +1,17 @@
+<p>Welcome <a [routerLink]="['profile']">{{userData?.username}}</a> ({{userData?.email}})</p>
+<button [ngClass]="'button-disabled'" (click)="logout()">Logout</button><br>
+
+<p>Posts ({{posts.length}}):</p>
+
+<ng-container *ngFor="let post of posts; let i = index;">
+  <app-post [ngClass]="'post'" [username]="getUsernameForPost(i)!!" [post]="post" [canEdit]="post.userId == userData?._id" (delete)="onPostDelete($event)" (edit)="onPostEdit($event)"></app-post>
+</ng-container>
+
+<br>
+<button (click)="isNewPostDialogOpen = !isNewPostDialogOpen" [ngClass]="isNewPostDialogOpen ? 'button-disabled' : 'button-enabled'">
+  {{isNewPostDialogOpen ? 'Cancel' : 'Create new post'}}
+</button>
+<br><br>
+
+<app-new-post-dialog *ngIf="isNewPostDialogOpen" (postCreated)="addPost($event)"></app-new-post-dialog>
+

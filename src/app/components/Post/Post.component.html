@@ -1,0 +1,7 @@
+<div [ngClass]="'card'">
+    <p>by {{username}} at "{{formatDate(post.timestamp)}}"</p>
+    <p *ngIf="!isEditing">{{post.comment}}</p>
+    <textarea *ngIf="isEditing" [(ngModel)]="currentTextareaText">{{currentTextareaText}}</textarea><br>
+    <button *ngIf="canEdit" [ngClass]="'button-delete'" (click)="onDelete()">Delete</button>
+    <button *ngIf="canEdit" [ngClass]="!isEditing ? 'button-edit' : 'done-button'" (click)="onEdit()">{{!isEditing ? 'Edit' : 'Done editing'}}</button>
+</div>

@@ -1,0 +1,7 @@
+<div [ngClass]="'card'">
+    <p>User: {{userData?.username}}</p>
+    <p><b>New post:</b></p>
+    <textarea [(ngModel)]="commentInput"></textarea>
+    <br>
+    <button [disabled]="!commentInput.length" (click)="createPost()" [ngClass]="commentInput.length ? 'button-enabled' : 'button-disabled'">Send</button>
+</div>

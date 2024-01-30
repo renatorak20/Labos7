@@ -1,0 +1,62 @@
+.card {
+  background-color: rgb(190, 201, 210);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  max-width: 400px;
+  max-height: fit-content;
+
+  margin-bottom: 10px;
+}
+
+.button-delete {
+  background-color: red;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-delete:hover {
+  background-color: red;
+}
+
+.button-edit {
+  background-color: #F0AC4B;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-edit:hover {
+  background-color: #cb903f;
+}
+
+.done-button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.done-button:hover {
+  background-color: #45a049;
+}
